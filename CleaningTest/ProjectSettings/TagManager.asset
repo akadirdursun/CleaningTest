@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Dirt
-  - 
+  - post
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dirt
+    uniqueID: 3028197821
     locked: 0

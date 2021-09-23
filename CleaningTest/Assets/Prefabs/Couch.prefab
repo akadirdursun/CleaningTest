@@ -169,9 +169,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3467580537095539737, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3467580537095539737, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1266769475
+      objectReference: {fileID: 0}
     - target: {fileID: 3467580537095539739, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
       propertyPath: m_Name
       value: Dirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_LightOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[0]
+      value: -1266769475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527159365683954087, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: -1266769475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13a95ce283e6554ab522087df8cec80, type: 3}
