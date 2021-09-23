@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Cleaner : MonoBehaviour
 {
+    //[SerializeField] private Texture2D brushTexture;
+    [SerializeField] private int brushSize = 5;
     private Camera cam;
+    private Texture2D dirtTexture = null;
 
     private void Awake()
     {
@@ -26,20 +29,41 @@ public class Cleaner : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
         if (hit)
-        {            
-            Texture2D texture = hit.collider.GetComponent<SpriteRenderer>().sprite.texture;
-            int pixelPerUnit = (int)hit.collider.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-            Vector2 uvCoord = ConvertPixelToUVCoordinates(texture.width, texture.height, pixelPerUnit, pixelPerUnit);
+        {
+            if (dirtTexture == null)
+                dirtTexture = hit.collider.GetComponent<SpriteRenderer>().sprite.texture;
 
-            float heightRatio = (texture.height / (uvCoord.y * 2));
-            float widthRatio = (texture.width / (uvCoord.x * 2));
+            int pixelPerUnit = (int)hit.collider.GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
+            Vector2 uvCoord = ConvertPixelToUVCoordinates(dirtTexture.width, dirtTexture.height, pixelPerUnit, pixelPerUnit);
+
+            float heightRatio = (dirtTexture.height / (uvCoord.y * 2));
+            float widthRatio = (dirtTexture.width / (uvCoord.x * 2));
 
             uvCoord += mousePos;
             int pixelX = (int)(uvCoord.x * widthRatio);
             int pixelY = (int)(uvCoord.y * heightRatio);
-            texture.SetPixel(pixelX, pixelY, new Color32(0, 0, 0, 0));
-            texture.Apply();
+            CleanWithBrush(pixelX, pixelY);
+            return;
+
+            dirtTexture.SetPixel(pixelX, pixelY, new Color32(0, 0, 0, 0));
+            dirtTexture.Apply();
         }
+    }
+
+    private void CleanWithBrush(int _pixelX, int _pixelY)
+    {
+        int pixelXOfSet = _pixelX - (brushSize / 2);
+        int pixelYOfSet = _pixelY - (brushSize / 2);
+
+        for (int x = 0; x < brushSize; x++)
+        {
+            for (int y = 0; y < brushSize; y++)
+            {
+                dirtTexture.SetPixel(pixelXOfSet + x, pixelYOfSet + y, new Color(0, 0, 0, 0));
+                dirtTexture.Apply();
+            }
+        }
+
     }
 
     private Vector2 ConvertPixelToUVCoordinates(int x, int y, int textureWidth, int textureHeight)
