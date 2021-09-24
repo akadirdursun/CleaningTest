@@ -10,7 +10,7 @@ public class Glow : MonoBehaviour
     private Coroutine glowRoutine = null;
 
     private void Awake()
-    {
+    {        
         glowSource = GetComponentInChildren<Light2D>();
     }
 

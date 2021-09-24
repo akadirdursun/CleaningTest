@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 1e3b4f6c8ad52a34ba4cc0c7a2c66283, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: b1397311ed52a984883d10fa8ef7510a, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 3467580537095539737}
   - component: {fileID: 3467580537095539738}
   - component: {fileID: 1565316585626893412}
+  - component: {fileID: 8735042737130398915}
   m_Layer: 6
   m_Name: Dirt
   m_TagString: Untagged
@@ -146,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1e3b4f6c8ad52a34ba4cc0c7a2c66283, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,7 +155,7 @@ SpriteRenderer:
   m_Size: {x: 0.84375, y: 0.453125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &3467580537095539738
@@ -197,3 +198,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowSpeed: 15
   maxGlow: 200
+--- !u!114 &8735042737130398915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3467580537095539739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae30cb481154534f897be8bd85141a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirtSprite: {fileID: 21300000, guid: e40e4b5487cd79543b76c2d530a87d6d, type: 3}

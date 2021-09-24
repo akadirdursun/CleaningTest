@@ -4,7 +4,7 @@ namespace AbdulkadirDursun.TextureCleaning
 {
     public class Cleaner : MonoBehaviour
     {
-        //[SerializeField] private Texture2D brushTexture;
+        //[SerializeField] private Texture2D brushTexture;        
         [SerializeField] private int brushSize = 5;
         private Camera cam;
         private Texture2D dirtTexture = null;
@@ -24,8 +24,6 @@ namespace AbdulkadirDursun.TextureCleaning
         private void Cleaning()
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
             if (hit)
@@ -63,9 +61,7 @@ namespace AbdulkadirDursun.TextureCleaning
                     dirtTexture.Apply();
                 }
             }
-
         }
-
         private Vector2 ConvertPixelToUVCoordinates(int x, int y, int textureWidth, int textureHeight)
         {
             return new Vector2((float)x / textureWidth, (float)y / textureHeight);
