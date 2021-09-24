@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d837ed3576360e49ac374f37573aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowSpeed: 15
+  glowSpeed: 25
   maxGlow: 200
 --- !u!114 &8735042737130398915
 MonoBehaviour:

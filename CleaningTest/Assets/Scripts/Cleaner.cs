@@ -58,9 +58,9 @@ namespace AbdulkadirDursun.TextureCleaning
                 for (int y = 0; y < brushSize; y++)
                 {
                     dirtTexture.SetPixel(pixelXOfSet + x, pixelYOfSet + y, new Color(0, 0, 0, 0));
-                    dirtTexture.Apply();
                 }
             }
+                    dirtTexture.Apply();
         }
         private Vector2 ConvertPixelToUVCoordinates(int x, int y, int textureWidth, int textureHeight)
         {
