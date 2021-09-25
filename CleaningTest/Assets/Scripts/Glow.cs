@@ -28,6 +28,12 @@ public class Glow : MonoBehaviour
                 glowRoutine = StartCoroutine(GlowRoutine());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StopCoroutine(glowRoutine);
+            glowSource.intensity = 0;
+        }
     }
 
     private IEnumerator GlowRoutine()
